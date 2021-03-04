@@ -23,8 +23,11 @@ from app import app
 # app = dash.Dash(__name__,external_stylesheets=[dbc.themes.CYBORG, FA], suppress_callback_exceptions=True)#,prevent_initial_callbacks=True
 token = "pk.eyJ1IjoiaHVtYW5pbmciLCJhIjoiY2tpcHJiN3BlMDBjaDJ1b2J6ODQ4dzNlcyJ9.55HzvciQ31i0_ODARa9rLQ"
 
+#
 df = pd.read_csv("data/tk2017_maps_so_far2.csv", delimiter =';', decimal =',', encoding ='utf-8',na_values=['#DIV/0!'])
-df_flyer = pd.read_csv("data/fl2.csv", delimiter =',', decimal ='.', encoding ='utf-8',na_values=['#DIV/0!'])
+df_buurten = pd.read_csv("data/buurten_v1.csv", delimiter =',', decimal =',', encoding ='utf-8', na_values=['#DIV/0!'])
+
+# df_flyer = pd.read_csv("fl2_test.csv", delimiter =',', decimal ='.', encoding ='utf-8',na_values=['#DIV/0!'])
 
 # df = pd.read_csv("tk2017_maps_so_far2.csv", delimiter =';', decimal =',', encoding ='utf-8',na_values=['#DIV/0!'])
 
@@ -49,6 +52,37 @@ def fig_campagne(df,token):
     fig.update_layout(margin={"r": 0, "t": 0,"l": 0, "b": 0})
     fig.update_layout(uirevision=True)
     return fig
+
+def get_polygon(lons, lats, color='blue'):
+    if len(lons) != len(lats):
+        raise ValueError('the legth of longitude list  must coincide with that of latitude')
+    geojd = {"type": "FeatureCollection"}
+    geojd['features'] = []
+    coords = []
+    for lon, lat in zip(lons, lats):
+        coords.append((lon, lat))
+    coords.append((lons[0], lats[0]))  #close the polygon
+    geojd['features'].append({ "type": "Feature",
+                               "geometry": {"type": "Polygon",
+                                            "coordinates": [coords] }})
+    layer=dict(sourcetype = 'geojson',
+             source =geojd,
+             below='',
+             type = 'fill',
+             opacity = 0.3,
+             color = color)
+    return layer
+
+def create_flyer_layers(df):
+    mylayers =[]
+    for buurt in list(df.columns):
+        lats = []
+        lons = []
+        for i in range(0,len(df[buurt].dropna())):
+            lats.append(float(df[buurt].dropna()[i].split(', ')[0]))
+            lons.append(float(df[buurt].dropna()[i].split(', ')[1]))
+        mylayers.append(get_polygon(lons=lons, lats=lats, color='#FFFF00'))
+    return mylayers
 
 def filter_data(list,df):
     if list in ([2, 1], [1, 2]):
@@ -156,9 +190,9 @@ layout = html.Div([
     [dash.dependencies.Input('switch_vk_flyer', 'on')])
 def update_output(on):
     if on:
-        pick = "Tweede Kamer Verkiezingen"
+        pick = "Flyer gebieden AAN"
     else:
-        pick = "Flyers"
+        pick = "Flyer gebieden uit"
     return '{}'.format(pick)
 
 @app.callback(
@@ -177,12 +211,17 @@ def on_form_change(radio_items_value):
      Input('switch_vk_flyer', 'on')]
 )
 def on_form_change(radio_items_value,color_value,filter,tk_flyer):
+    df_filtered = filter_data(filter, df)
+    fig = fig_maps(df_filtered, token, radio_items_value, color_value)
     if tk_flyer:
-        df_filtered = filter_data(filter,df)
-        fig = fig_maps(df_filtered, token, radio_items_value,color_value)
+        # fig = fig_campagne(df_flyer,token)
+        mylayers =  create_flyer_layers(df_buurten)
+        fig.layout.update(mapbox_layers=mylayers)
+        return fig
     else:
-        fig = fig_campagne(df_flyer,token)
-    return fig
+        return fig
 
-if __name__ == '__main__':
-    app.run_server(debug=True)
+    # return fig
+
+# if __name__ == '__main__':
+#     app.run_server(debug=True)

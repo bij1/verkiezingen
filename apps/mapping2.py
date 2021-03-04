@@ -23,10 +23,11 @@ FA = "https://use.fontawesome.com/releases/v5.15.1/css/all.css"
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.CYBORG, FA], suppress_callback_exceptions=True)#,prevent_initial_callbacks=True
 token = "pk.eyJ1IjoiaHVtYW5pbmciLCJhIjoiY2tpcHJiN3BlMDBjaDJ1b2J6ODQ4dzNlcyJ9.55HzvciQ31i0_ODARa9rLQ"
 
-df = pd.read_csv("../data/tk2017_maps_so_far2.csv", delimiter =';', decimal =',', encoding ='utf-8',na_values=['#DIV/0!'])
+# df = pd.read_csv("../data/tk2017_maps_so_far2.csv", delimiter =';', decimal =',', encoding ='utf-8',na_values=['#DIV/0!'])
+df = pd.read_csv("tk2017_maps_so_far2_test.csv", delimiter =';', decimal =',', encoding ='utf-8',na_values=['#DIV/0!'])
 df_flyer = pd.read_csv("../data/fl2.csv", delimiter =',', decimal ='.', encoding ='utf-8',na_values=['#DIV/0!'])
 
-# df = pd.read_csv("tk2017_maps_so_far2.csv", delimiter =';', decimal =',', encoding ='utf-8',na_values=['#DIV/0!'])
+# df = pd.read_csv("../data/tk2017_maps_so_far2.csv", delimiter =';', decimal =',', encoding ='utf-8',na_values=['#DIV/0!'])
 
 df['kleur'] = 0
 def fig_maps(df,token,size,color):
@@ -42,6 +43,34 @@ def fig_maps(df,token,size,color):
     # fig.update_layout(hovermode="text")
 
     return fig
+
+test_fig = fig_maps(df,token,'Artikel 1','kleur')
+test_fig.layout.update(mapbox_layers =mylayers)
+test_fig.show()
+def get_polygon(lons, lats, color='blue'):
+    if len(lons) != len(lats):
+        raise ValueError('the legth of longitude list  must coincide with that of latitude')
+    geojd = {"type": "FeatureCollection"}
+    geojd['features'] = []
+    coords = []
+    for lon, lat in zip(lons, lats):
+        coords.append((lon, lat))
+    coords.append((lons[0], lats[0]))  #close the polygon
+    geojd['features'].append({ "type": "Feature",
+                               "geometry": {"type": "Polygon",
+                                            "coordinates": [coords] }})
+    layer=dict(sourcetype = 'geojson',
+             source =geojd,
+             below='',
+             type = 'fill',
+             color = color)
+    return layer
+
+mylayers =[]
+# mylayers.append(get_polygon(lons=[14, 16, 16, 14], lats=[58.55, 58.55, 60.6, 60.6],  color='gold'))
+lat = [52.40208673,52.39964529,52.39727065]
+lon = [4.911449615,4.919536571,4.91367751]
+mylayers.append(get_polygon(lons=lon, lats=lat,  color='gold'))
 
 def fig_campagne(df,token):
     fig = px.scatter_mapbox(df, lat="Lat", lon="Long", size="Flyers",
