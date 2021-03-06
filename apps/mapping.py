@@ -1,19 +1,12 @@
 import dash_core_components as dcc
-import dash_html_components as html
-from dash.dependencies import Input, Output
-import plotly.graph_objs as go
 import plotly.express as px
 import pandas as pd
 import dash_daq as daq
-
-import json
-import dash_bootstrap_components as dbc
 import dash
 import dash_bootstrap_components as dbc
 import dash_html_components as html
 from dash.dependencies import Output, Input
-from dash_extensions import Download
-from dash_extensions.snippets import send_data_frame
+
 import numpy as np
 import base64
 

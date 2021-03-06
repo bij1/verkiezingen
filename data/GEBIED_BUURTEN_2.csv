@@ -1,0 +1,482 @@
+OBJECTNUMMER;Buurt_code;Buurt;Buurtcombinatie_code;Stadsdeel_code;Opp_m2
+1;F81d;Calandlaan/Lelylaan;F81;F;1
+2;F81e;Osdorp Zuidoost;F81;F;2
+3;F82a;Osdorp Midden Noord;F82;F;1
+4;F82b;Osdorp Midden Zuid;F82;F;2
+5;F82c;Zuidwestkwadrant Osdorp Noord;F82;F;1
+6;F82d;Zuidwestkwadrant Osdorp Zuid;F82;F;1
+7;F83a;De Punt;F83;F;2
+8;F83b;Bedrijvencentrum Osdorp;F83;F;1
+9;F86a;Overtoomse Veld Noord;F86;F;2
+10;F86c;Rembrandtpark Noord;F86;F;1
+11;F86d;Rembrandtpark Zuid;F86;F;1
+12;F86e;Johan Jongkindbuurt;F86;F;2
+13;F86f;Lucas/Andreasziekenhuis e.o.;F86;F;3
+14;F87a;Koningin Wilhelminaplein;F87;F;3
+15;F87b;Andreasterrein;F87;F;1
+16;F87c;Delflandpleinbuurt Oost;F87;F;1
+17;F87d;Delflandpleinbuurt West;F87;F;2
+18;F87e;Riekerhaven;F87;F;1
+19;F87f;Schipluidenbuurt;F87;F;2
+20;F88a;Riekerpolder;F88;F;1
+21;F88b;Park Haagseweg;F88;F;1
+22;F88e;Nieuw Sloten Noordwest;F88;F;2
+23;F88f;Nieuw Sloten Noordoost;F88;F;3
+24;F88g;Belgiëplein e.o.;F88;F;2
+25;F88h;Nieuw Sloten Zuidwest;F88;F;3
+26;F88i;Nieuw Sloten Zuidoost;F88;F;3
+27;K24a;Hemonybuurt;K24;K;2
+28;K24b;Gerard Doubuurt;K24;K;1
+29;K24c;Frans Halsbuurt;K24;K;2
+30;K24d;Hercules Seghersbuurt;K24;K;1
+31;K24e;Sarphatiparkbuurt;K24;K;1
+32;K25a;Willibrordusbuurt;K25;K;2
+33;K25b;Van der Helstpleinbuurt;K25;K;1
+34;K25c;Lizzy Ansinghbuurt;K25;K;2
+35;K25d;Cornelis Troostbuurt;K25;K;1
+36;K44a;Surinamepleinbuurt;K44;K;1
+37;A00a;Kop Zeedijk;A00;A;2
+38;A00e;BG-terrein e.o.;A00;A;1
+39;A01a;Stationsplein e.o.;A01;A;2
+40;A01b;Hemelrijk;A01;A;1
+41;A01d;Spuistraat Noord;A01;A;1
+42;A01e;Nieuwe Kerk e.o.;A01;A;2
+43;A01f;Spuistraat Zuid;A01;A;1
+44;A01h;Kalverdriehoek;A01;A;2
+45;A02a;Langestraat e.o.;A02;A;1
+46;A02b;Leliegracht e.o.;A02;A;1
+47;A02c;Felix Meritisbuurt;A02;A;2
+48;A02d;Leidsegracht Noord;A02;A;1
+49;A03a;Spiegelbuurt;A03;A;2
+50;A03b;Gouden Bocht;A03;A;1
+51;A03c;Van Loonbuurt;A03;A;1
+52;A03d;Amstelveldbuurt;A03;A;2
+53;A03e;Rembrandtpleinbuurt;A03;A;1
+54;A04b;Scheepvaarthuisbuurt;A04;A;2
+55;A04c;Rapenburg;A04;A;1
+56;A04d;Lastage;A04;A;1
+57;A04f;Uilenburg;A04;A;2
+58;A04g;Valkenburg;A04;A;1
+59;A04h;Zuiderkerkbuurt;A04;A;2
+60;A04i;Waterloopleinbuurt;A04;A;1
+61;A05c;Haarlemmerbuurt West;A05;A;1
+62;A05d;Westelijke eilanden;A05;A;2
+63;A06a;Driehoekbuurt;A06;A;1
+64;A06c;Bloemgrachtbuurt;A06;A;2
+65;A06d;Marnixbuurt Noord;A06;A;1
+66;A06f;Marnixbuurt Midden;A06;A;1
+67;A06g;Elandsgrachtbuurt;A06;A;2
+68;A06h;Passeerdersgrachtbuurt;A06;A;1
+69;A06i;Groenmarktkadebuurt;A06;A;2
+70;A06j;Marnixbuurt Zuid;A06;A;1
+71;A07a;Leidsebuurt Noordwest;A07;A;1
+72;A07b;Leidsebuurt Zuidwest;A07;A;2
+73;A07c;Leidsebuurt Noordoost;A07;A;1
+74;A07d;Leidsebuurt Zuidoost;A07;A;2
+75;A07e;Weteringbuurt;A07;A;1
+76;A07f;Den Texbuurt;A07;A;1
+77;A07g;Utrechtsebuurt Zuid;A07;A;2
+78;A07h;Frederikspleinbuurt;A07;A;1
+79;A08a;Weesperbuurt;A08;A;2
+80;A08b;Sarphatistrook;A08;A;1
+81;A09b;Kattenburg;A09;A;1
+82;A09c;Wittenburg;A09;A;2
+83;E12b;Houthavens Oost;E12;E;1
+84;E13a;Zeeheldenbuurt;E13;E;2
+85;E13b;Spaarndammerbuurt Noordoost;E13;E;1
+86;E13c;Spaarndammerbuurt Zuidoost;E13;E;1
+87;E13d;Spaarndammerbuurt Zuidwest;E13;E;2
+88;E13e;Spaarndammerbuurt Midden;E13;E;1
+89;E13g;Westergasfabriek;E13;E;2
+90;E14a;De Wittenbuurt Noord;E14;E;1
+91;E14b;De Wittenbuurt Zuid;E14;E;1
+92;E14c;Staatsliedenbuurt Noordoost;E14;E;2
+93;E14d;Fannius Scholtenbuurt;E14;E;1
+94;E14e;Westerstaatsman;E14;E;2
+95;E14f;Buyskade e.o.;E14;E;1
+96;E15a;Ecowijk;E15;E;1
+97;E15b;Markthallen;E15;E;2
+98;E16c;Frederik Hendrikbuurt Zuidwest;E16;E;1
+99;E17a;Da Costabuurt Noord;E17;E;2
+100;E18a;Bellamybuurt Noord;E18;E;1
+101;E18b;Bellamybuurt Zuid;E18;E;1
+102;E19a;Da Costabuurt Zuid;E19;E;2
+103;E19b;Borgerbuurt;E19;E;1
+104;E19c;Lootsbuurt;E19;E;2
+105;E20a;Helmersbuurt Oost;E20;E;1
+106;E20b;WG-terrein;E20;E;1
+107;E20c;Cremerbuurt Oost;E20;E;2
+108;E21a;Cremerbuurt West;E21;E;1
+109;E21b;Vondelparkbuurt West;E21;E;2
+110;E22a;Vondelparkbuurt Oost;E22;E;1
+111;E22b;Vondelparkbuurt Midden;E22;E;1
+112;E37a;Bedrijventerrein Landlust;E37;E;2
+113;E37c;Bosleeuw;E37;E;1
+114;E37d;Landlust Zuid;E37;E;2
+115;E37e;Erasmusparkbuurt Oost;E37;E;1
+116;E39c;Kolenkitbuurt Zuid;E39;E;1
+117;E39d;Kolenkitbuurt Noord;E39;E;2
+118;E41a;John Franklinbuurt;E41;E;1
+119;E41b;Jan Maijenbuurt;E41;E;2
+120;E41c;Orteliusbuurt Noord;E41;E;1
+121;E41d;Mercatorpark;E41;E;1
+122;E42a;Balboaplein e.o.;E42;E;2
+123;E42b;Columbusplein e.o.;E42;E;1
+124;E42c;Orteliusbuurt Midden;E42;E;2
+125;E42d;Orteliusbuurt Zuid;E42;E;1
+126;E43a;Paramariboplein e.o.;E43;E;1
+127;E43b;Postjeskade e.o.;E43;E;2
+128;F76a;Buurt 3;F76;F;1
+129;F76b;Buurt 2;F76;F;2
+130;F77a;Slotermeer Zuid;F77;F;1
+131;F77b;Noordoever Sloterplas;F77;F;1
+132;F77c;Buurt 4 Oost;F77;F;2
+133;F77d;Buurt 5 Noord;F77;F;1
+134;F77e;Sloterpark;F77;F;2
+135;F77f;Buurt 5 Zuid;F77;F;1
+136;F78a;Buurt 6;F78;F;1
+137;F78b;Buurt 7;F78;F;2
+138;F78c;Buurt 8;F78;F;1
+139;F78d;Buurt 9;F78;F;2
+140;F78e;Eendrachtspark;F78;F;1
+141;F79a;Osdorper Binnenpolder;F79;F;1
+142;F79b;Buurt 10;F79;F;2
+143;F80a;Ookmeer;F80;F;1
+144;F81a;Wildeman;F81;F;2
+145;F81b;Meer en Oever;F81;F;1
+146;F81c;Osdorpplein e.o.;F81;F;1
+147;M57b;Nieuwe Oosterbegraafplaats;M57;M;2
+148;N60a;Van der Pekbuurt;N60;N;1
+149;N60b;Bloemenbuurt Zuid;N60;N;2
+150;N60c;Bloemenbuurt Noord;N60;N;1
+151;N61a;IJplein e.o.;N61;N;1
+152;N61b;Vogelbuurt Zuid;N61;N;2
+153;N61d;Vliegenbos;N61;N;1
+154;N62a;Tuindorp Nieuwendam West;N62;N;2
+155;N62b;Tuindorp Nieuwendam Oost;N62;N;1
+156;N64a;Buiksloterdijk West;N64;N;1
+157;N64d;Nieuwendammerdijk Oost;N64;N;2
+158;N64e;Nieuwendammerdijk Zuid;N64;N;1
+159;N65a;Tuindorp Oostzaan West;N65;N;2
+160;N65b;Tuindorp Oostzaan Oost;N65;N;1
+161;N65c;Terrasdorp;N65;N;1
+162;N65d;De Bongerd;N65;N;2
+163;N66c;Walvisbuurt;N66;N;1
+164;N66d;Twiske West;N66;N;2
+165;N66e;Noorder IJplas;N66;N;1
+166;N67b;Twiske Oost;N67;N;1
+167;N69a;Rode Kruisbuurt;N69;N;2
+168;N69c;Loenermark;N69;N;1
+169;N70a;Banne Zuidwest;N70;N;2
+170;N70b;Banne Zuidoost;N70;N;1
+171;N70c;Banne Noordwest;N70;N;1
+172;N70d;Banne Noordoost;N70;N;2
+173;N70f;Marjoleinterrein;N70;N;1
+174;N73a;Schellingwoude West;N73;N;2
+175;N73b;Schellingwoude Oost;N73;N;1
+176;N73c;Schellingwoude Noord;N73;N;1
+177;N73d;Durgerdam;N73;N;2
+178;N73e;Zwarte Gouw;N73;N;1
+179;N73f;Ransdorp;N73;N;2
+180;N73g;Holysloot;N73;N;1
+181;N73h;Zunderdorp;N73;N;1
+182;T92b;Amstel III deel A/B Noord;T92;T;2
+183;T92d;Amstel III deel A/B Zuid;T92;T;1
+184;T92f;AMC;T92;T;2
+185;T93d;F-buurt;T93;T;1
+186;T93e;Amsterdamse Poort;T93;T;1
+187;T93f;Hoptille;T93;T;2
+188;T93g;Rechte H-buurt;T93;T;1
+189;T93h;Hakfort/Huigenbos;T93;T;2
+190;T93i;Huntum;T93;T;1
+191;T93j;Vogeltjeswei;T93;T;1
+192;T93k;Bijlmerpark West;T93;T;2
+193;T94d;Kortvoort;T94;T;1
+194;T94e;Kelbergen;T94;T;2
+195;T94h;K-buurt Zuidwest;T94;T;1
+196;T94l;Bijlmerpark Oost;T94;T;1
+197;T94m;G-buurt Noord;T94;T;2
+198;T95a;L-buurt;T95;T;1
+199;T96a;Holendrecht West;T96;T;2
+200;T96b;Reigersbos Noord;T96;T;1
+201;T96c;Holendrecht Oost;T96;T;1
+202;T96f;Reigersbos Midden;T96;T;2
+203;T97a;Gein Noordwest;T97;T;1
+204;T97b;Gein Zuidwest;T97;T;2
+205;A01c;Nieuwendijk Noord;A01;A;1
+206;F80b;Osdorper Bovenpolder;F80;F;1
+207;F80c;Bedrijvenpark Lutkemeer;F80;F;2
+208;F88c;Nieuwe Meer;F88;F;1
+209;F88d;Sloterweg e.o.;F88;F;2
+210;K90e;Amsterdamse Bos;K90;K;1
+211;A06e;Zaagpoortbuurt;A06;A;1
+212;E16a;Frederik Hendrikbuurt Noord;E16;E;2
+213;E16b;Frederik Hendrikbuurt Zuidoost;E16;E;1
+214;K44b;Westlandgrachtbuurt;K44;K;2
+215;K44c;Aalsmeerwegbuurt West;K44;K;1
+216;K44e;Legmeerpleinbuurt;K44;K;1
+217;K46a;Valeriusbuurt Oost;K46;K;2
+218;K46b;Valeriusbuurt West;K46;K;1
+219;K47a;Johannnes Vermeerbuurt;K47;K;2
+220;K47b;P.C. Hooftbuurt;K47;K;1
+221;K47c;Concertgebouwbuurt;K47;K;1
+222;K47d;Cornelis Schuytbuurt;K47;K;2
+223;K47e;Banpleinbuurt;K47;K;1
+224;K47f;Hondecoeterbuurt;K47;K;2
+225;K47g;Harmoniehofbuurt;K47;K;1
+226;K47h;Museumplein;K47;K;1
+227;K47i;Vondelpark Oost;K47;K;2
+228;K48a;Bertelmanpleinbuurt;K48;K;1
+229;K48b;Marathonbuurt Oost;K48;K;2
+230;K48c;Marathonbuurt West;K48;K;1
+231;K49a;Diepenbrockbuurt;K49;K;1
+232;K49b;Beethovenbuurt;K49;K;2
+233;K49c;Hiltonbuurt;K49;K;1
+234;K49d;Minervabuurt Noord;K49;K;2
+235;K49e;Minervabuurt Midden;K49;K;1
+236;K49f;Minervabuurt Zuid;K49;K;1
+237;K52a;Wielingenbuurt;K52;K;2
+238;K52b;Scheldebuurt West;K52;K;1
+239;K52c;Scheldebuurt Midden;K52;K;2
+240;K52d;Scheldebuurt Oost;K52;K;1
+241;K53a;IJselbuurt West;K53;K;1
+242;K53b;IJselbuurt Oost;K53;K;2
+243;K54a;Kromme Mijdrechtbuurt;K54;K;1
+244;K54b;Rijnbuurt Oost;K54;K;2
+245;K54c;Rijnbuurt Midden;K54;K;1
+246;K54d;Rijnbuurt West;K54;K;1
+247;K54e;Zorgvlied;K54;K;2
+248;K90a;Gelderlandpleinbuurt;K90;K;1
+249;K90c;Buitenveldert Midden Zuid;K90;K;2
+250;K90d;Buitenveldert Zuidwest;K90;K;1
+251;K91a;De Klenckebuurt;K91;K;1
+252;K91b;Buitenveldert Oost Midden;K91;K;2
+253;K91c;Buitenveldert Zuidoost;K91;K;1
+254;K91d;Amstelpark;K91;K;2
+255;M27a;Swammerdambuurt;M27;M;1
+256;M27b;Weesperzijde Midden/Zuid;M27;M;1
+257;M27c;Parooldriehoek;M27;M;2
+258;M28a;Oosterparkbuurt Noordwest;M28;M;1
+259;M28b;Oosterpark;M28;M;2
+260;M28c;Oosterparkbuurt Zuidoost;M28;M;1
+261;M28d;Oosterparkbuurt Zuidwest;M28;M;1
+262;M29a;Dapperbuurt Noord;M29;M;2
+263;M29b;Dapperbuurt Zuid;M29;M;1
+264;M30a;Transvaalbuurt West;M30;M;2
+265;M30b;Transvaalbuurt Oost;M30;M;1
+266;M31a;Noordwestkwadrant Indische buurt Noord;M31;M;1
+267;M31b;Noordwestkwadrant Indische buurt Zuid;M31;M;2
+268;M31c;Zuidwestkwadrant Indische buurt;M31;M;1
+269;M32a;Noordoostkwadrant Indische buurt;M32;M;2
+270;M32b;Zuidoostkwadrant Indische buurt;M32;M;1
+271;M32c;Zeeburgerdijk Oost;M32;M;1
+272;M32d;Flevopark;M32;M;2
+273;M33a;Oostelijke Handelskade;M33;M;1
+274;M33c;Java-eiland;M33;M;2
+275;M33d;KNSM-eiland;M33;M;1
+276;M33e;Sporenburg;M33;M;1
+277;M33f;Borneo;M33;M;2
+278;M33g;Entrepot-Noordwest;M33;M;1
+279;M33h;Architectenbuurt;M33;M;2
+280;M33i;Bedrijvengebied Veelaan;M33;M;1
+281;M34a;Zeeburgereiland Noordwest;M34;M;1
+282;M34c;Zeeburgereiland Zuidoost;M34;M;2
+283;M35a;Steigereiland Noord;M35;M;1
+284;M35b;Steigereiland Zuid;M35;M;2
+285;M35c;Haveneiland Zuidwest/Rieteiland West;M35;M;1
+286;M51a;Rieteiland Oost;M51;M;1
+287;M55b;De Eenhoorn;M55;M;2
+288;M55d;Don Bosco;M55;M;1
+289;M55e;Frankendael;M55;M;2
+290;M55g;De Wetbuurt;M55;M;1
+291;M55h;Tuindorp Frankendael;M55;M;1
+292;M56a;Linnaeusparkbuurt;M56;M;2
+293;M56b;Middenmeer Noord;M56;M;1
+294;M56c;Middenmeer Zuid;M56;M;2
+295;M56d;Sportpark Middenmeer Zuid;M56;M;1
+296;M56e;Sportpark Middenmeer Noord;M56;M;1
+297;M56h;Science Park Noord;M56;M;2
+298;A05f;Planciusbuurt Noord;A05;A;1
+299;A05g;Planciusbuurt Zuid;A05;A;2
+300;K90j;Zuiderhof;K90;K;1
+301;B10h;Westhaven Zuid;B10;B;1
+302;E36b;Bedrijventerrein Sloterdijk I;E36;E;2
+303;E37f;Gibraltarbuurt;E37;E;1
+304;E37g;Landlust Noord;E37;E;2
+305;A06k;Anjeliersbuurt Noord;A06;A;1
+306;A06l;Anjeliersbuurt Zuid;A06;A;1
+307;A03g;Leidsegracht Zuid;A03;A;2
+308;A03f;Reguliersbuurt;A03;A;1
+309;E38c;Erasmusparkbuurt West;E38;E;2
+310;E38d;Robert Scottbuurt Oost;E38;E;1
+311;A08d;Plantage;A08;A;1
+312;A08e;Alexanderplein e.o.;A08;A;2
+313;A09i;Kadijken;A09;A;1
+314;K47j;Duivelseiland;K47;K;2
+315;F11j;Bretten West;F11;F;1
+316;F88j;Dorp Sloten;F88;F;1
+317;F89a;Louis Crispijnbuurt;F89;F;2
+318;F89b;Jacques Veldmanbuurt;F89;F;1
+319;F89d;Medisch Centrum Slotervaart;F89;F;2
+320;F89c;Staalmanbuurt;F89;F;1
+321;F11h;Bretten Oost;F11;F;1
+322;N66g;Circus/Kermisbuurt;N66;N;2
+323;N66f;Molenwijk;N66;N;1
+324;N73i;Noorderstrook West;N73;N;2
+325;N73j;Noorderstrook Oost;N73;N;1
+326;N69m;Buikslotermeer Noord;N69;N;1
+327;N69l;De Kleine Wereld;N69;N;2
+328;N69j;Buikslotermeerplein;N69;N;1
+329;N69k;Plan van Gool;N69;N;2
+330;M35e;Haveneiland Noordwest;M35;M;1
+331;M34f;RI Oost terrein;M34;M;1
+332;M34g;Zeeburgereiland Noordoost;M34;M;2
+333;K52g;Veluwebuurt;K52;K;1
+334;K52h;Kop Zuidas;K52;K;2
+335;K23b;RAI;K23;K;1
+336;K23a;Zuidas Noord;K23;K;1
+337;K23e;Vivaldi;K23;K;2
+338;K23d;Zuidas Zuid;K23;K;1
+339;K23c;VU-kwartier;K23;K;2
+340;K90i;Buitenveldert West Midden;K90;K;1
+341;M55i;Van der Kunbuurt;M55;M;1
+342;M35f;Haveneiland Noordoost;M35;M;2
+343;M50b;Middeneiland Zuidoost;M50;M;1
+344;M50e;Middeneiland Noordwest;M50;M;2
+345;M50c;Middeneiland Noordoost;M50;M;1
+346;M50f;Buiteneiland;M50;M;1
+347;A00b;Oude Kerk e.o.;A00;A;2
+348;A00c;Burgwallen Oost;A00;A;1
+349;A00d;Nes e.o.;A00;A;2
+350;A01g;Begijnhofbuurt;A01;A;1
+351;A04a;Oosterdokseiland;A04;A;1
+352;A04e;Nieuwmarkt;A04;A;2
+353;A05a;Westerdokseiland;A05;A;1
+354;A05b;Haarlemmerbuurt Oost;A05;A;2
+355;A09a;Marine-Etablissement;A09;A;1
+356;A09d;Oostenburg;A09;A;1
+357;A09e;Czaar Peterbuurt;A09;A;2
+358;A09f;Het Funen;A09;A;1
+359;A09h;Kazernebuurt;A09;A;2
+360;B10a;Coenhaven/Mercuriushaven;B10;B;1
+361;B10b;Alfa-driehoek;B10;B;1
+362;B10c;Petroleumhaven;B10;B;2
+363;B10d;Westhaven Noord;B10;B;1
+364;B10e;Vervoerscentrum;B10;B;2
+365;B10f;Amerikahaven;B10;B;1
+366;B10g;Afrikahaven;B10;B;1
+367;E12a;Houthavens West;E12;E;2
+368;E13f;Spaarndammerbuurt Noordwest;E13;E;1
+369;E13h;Overbraker Binnenpolder;E13;E;2
+370;E15c;Bedrijvencentrum Westerkwartier;E15;E;1
+371;E15d;Marcanti;E15;E;1
+372;E36a;Woon- en Groengebied Sloterdijk;E36;E;2
+373;E39a;Robert Scottbuurt West;E39;E;1
+374;E39b;Laan van Spartaan;E39;E;2
+375;F11a;Sloterdijk II;F11;F;1
+376;F11c;Sloterdijk III Oost;F11;F;1
+377;F11d;Sloterdijk III West;F11;F;2
+378;F11e;De Heining;F11;F;1
+379;F11f;Teleport;F11;F;2
+380;K44d;Aalsmeerwegbuurt Oost;K44;K;1
+381;K44f;Bedrijventerrein Schinkel;K44;K;1
+382;K45a;Schinkelbuurt Noord;K45;K;2
+383;K45b;Schinkelbuurt Zuid;K45;K;1
+384;K46c;Willemsparkbuurt Noord;K46;K;2
+385;K46d;Vondelpark West;K46;K;1
+386;K48d;Olympisch Stadion e.o.;K48;K;1
+387;K48e;IJsbaanpad e.o.;K48;K;2
+388;K48f;Van Tuyllbuurt;K48;K;1
+389;M29c;Oostpoort;M29;M;2
+390;M33b;Rietlanden;M33;M;1
+391;M33j;Bedrijvengebied Cruquiusweg;M33;M;1
+392;M33k;Bedrijvengebied Zeeburgerkade;M33;M;2
+393;M34d;Zeeburgereiland Zuidwest;M34;M;1
+394;M51c;Haveneiland Noord;M51;M;2
+395;M55c;Julianapark;M55;M;1
+396;M55f;Tuindorp Amstelstation;M55;M;1
+397;N61c;Vogelbuurt Noord;N61;N;2
+398;N63a;Blauwe Zand;N63;N;1
+399;N64c;Nieuwendammmerdijk West;N64;N;2
+400;N66b;Oostzanerdijk;N66;N;1
+401;N67a;Kadoelen;N67;N;1
+402;N70e;Buiksloterbreek;N70;N;2
+403;N74a;Nintemanterrein;N74;N;1
+404;N74b;Elzenhagen Zuid;N74;N;2
+405;N74c;Elzenhagen Noord;N74;N;1
+406;T94b;G-buurt West;T94;T;1
+407;T94c;Bijlmermuseum Noord;T94;T;2
+408;T94f;K-buurt Midden;T94;T;1
+409;T94g;K-buurt Zuidoost;T94;T;2
+410;T94i;Grunder/Koningshoef;T94;T;1
+411;E40a;Geuzenhofbuurt;E40;E;1
+412;E40b;Trompbuurt;E40;E;2
+413;E40c;Pieter van der Doesbuurt;E40;E;1
+414;E75a;Kortenaerkwartier;E75;E;2
+415;E75b;Filips van Almondekwartier;E75;E;1
+416;E75c;De Wester Quartier;E75;E;1
+417;E75d;Van Brakelkwartier;E75;E;2
+418;F84a;Middelveldsche Akerpolder;F84;F;1
+419;F84b;De Aker West;F84;F;2
+420;F84c;De Aker Oost;F84;F;1
+421;F85a;Oostoever Sloterplas;F85;F;1
+422;F85b;Emanuel van Meterenbuurt;F85;F;2
+423;F85c;Jacob Geelbuurt;F85;F;1
+424;F86b;Overtoomse Veld Zuid;F86;F;2
+425;K26a;Diamantbuurt;K26;K;1
+426;K26b;Burgemeester Tellegenbuurt Oost;K26;K;1
+427;K26c;Burgemeester Tellegenbuurt West;K26;K;2
+428;K59a;Prinses Irenebuurt;K59;K;1
+429;K59b;Beatrixpark;K59;K;2
+430;M34e;Nieuwe Diep/Diemerpark;M34;M;1
+431;M50a;Strandeiland;M50;M;1
+432;M50d;Middeneiland Zuidwest;M50;M;2
+433;M50g;Centrumeiland;M50;M;1
+434;M51b;Haveneiland Oost;M51;M;2
+435;M56f;Park de Meer;M56;M;1
+436;M56g;Sportpark Voorland;M56;M;1
+437;M56i;Science Park Zuid;M56;M;2
+438;M57a;Betondorp;M57;M;1
+439;M57c;Drieburg;M57;M;2
+440;M58b;Weespertrekvaart;M58;M;1
+441;M58e;Amstelglorie;M58;M;1
+442;M58f;Overamstel;M58;M;2
+443;M58g;Amstelkwartier Noord;M58;M;1
+444;M58h;De Omval;M58;M;2
+445;M58i;Amstelkwartier Zuid;M58;M;1
+446;M58j;Amstelkwartier West;M58;M;1
+447;N64b;Buiksloterdijk Oost;N64;N;2
+448;N68a;Markengouw Noord;N68;N;1
+449;N68b;Werengouw Noord;N68;N;2
+450;N68c;Werengouw Midden;N68;N;1
+451;N68d;Markengouw Midden;N68;N;1
+452;N68e;Markengouw Zuid;N68;N;2
+453;N68f;Werengouw Zuid;N68;N;1
+454;N71c;Papaverweg e.o.;N71;N;2
+455;N71e;Cornelis Douwesterrein;N71;N;1
+456;N71f;NDSM terrein;N71;N;1
+457;N71g;Buiksloterham;N71;N;2
+458;N71h;Overhoeks;N71;N;1
+459;N72a;Bedrijventerrein Hamerstraat;N72;N;2
+460;N72b;Zamenhofstraat e.o.;N72;N;1
+461;N72c;Bedrijventerrein Nieuwendammerdijk;N72;N;1
+462;T92a;Hoofdcentrum Zuidoost;T92;T;2
+463;T92c;Amstel III deel C/D Noord;T92;T;1
+464;T92e;Amstel III deel C/D Zuid;T92;T;2
+465;T92g;Hoge Dijk;T92;T;1
+466;T93a;Velserpolder West;T93;T;1
+467;T93b;Venserpolder Oost;T93;T;2
+468;T93c;D-buurt;T93;T;1
+469;T94a;E-buurt;T94;T;2
+470;T94j;G-buurt Oost;T94;T;1
+471;T94k;Kantershof;T94;T;1
+472;T95b;Gaasperpark;T95;T;2
+473;T95c;Gaasperplas;T95;T;1
+474;T96g;Reigersbos Zuid;T96;T;2
+475;T97c;Gein Noordoost;T97;T;1
+476;T97d;Gein Zuioost;T97;T;1
+477;T98a;Dorp Driemond;T98;T;2
+478;T98b;Landelijk gebied Driemond;T98;T;1
+479;T94n;Bijlmermuseum Zuid;T94;T;2
+480;T96d;Gaasperdam Noord;T96;T;1
+481;T96e;Gaasperdam Zuid;T96;T;2

@@ -3,7 +3,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 from app import app
-from apps import donaties, mapping, campaign
+from apps import donaties, mapping, campaign, flyers
 from app import server
 
 colors = {
@@ -38,15 +38,15 @@ sidebar = html.Div(
                 dbc.NavLink(
                     [
                         html.I(className="fas fa-chart-area mr-2"),
-                        html.Span("Campaign"),
+                        html.Span("Flyers"),
                     ],
-                    href="/apps/campaign",
+                    href="/apps/flyers",
                     id="calendar-link",
                 ),
                 dbc.NavLink(
                     [
                         html.I(className="fas fa-map-marked-alt mr-2"),
-                        html.Span("Maps"),
+                        html.Span("Verkiezingen 2017"),
                     ],
                     href="/apps/maps",
                     id="messages-link",
@@ -68,8 +68,8 @@ app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
 def render_page_content(pathname):
     if pathname == "/":
         return donaties.layout
-    if pathname == '/apps/campaign':
-        return campaign.layout
+    if pathname == '/apps/flyers':
+        return flyers.layout
     elif pathname == '/apps/maps':
         return mapping.layout
     return dbc.Jumbotron(
