@@ -16,7 +16,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 # here enter the id of your google sheet
 SAMPLE_SPREADSHEET_ID_input ='1_xU8TGUOc0WJVdW0V6Z5cHs7yWsO3FoX7rya9wy9G7Q' #'1cvZswLiDo3LfhnA7RcS8vFqacx73RGor-OZ_FtvyLE8'
-SAMPLE_RANGE_NAME = 'A1:AD482'
+SAMPLE_RANGE_NAME = 'A1:AH1000'
 
 def main():
     global values_input, service
@@ -52,8 +52,8 @@ df_amsterdam_google_sheet=pd.DataFrame(values_input[1:], columns=values_input[0]
 # ssl._create_default_https_context = ssl._create_unverified_context
 token = "pk.eyJ1IjoiaHVtYW5pbmciLCJhIjoiY2tpcHJiN3BlMDBjaDJ1b2J6ODQ4dzNlcyJ9.55HzvciQ31i0_ODARa9rLQ"
 
-df_amsterdam = pd.read_csv("data/GEBIED_BUURTEN_2.csv", delimiter =';', decimal =',', encoding ='utf-8')
-df_amsterdam["Flyers"] = np.where(df_amsterdam.Opp_m2 == 1, 'Gedaan', np.where(df_amsterdam.Opp_m2 == 2, 'Moet nog', 'Deels Gedaan'))
+# df_amsterdam = pd.read_csv("data/GEBIED_BUURTEN_2.csv", delimiter =';', decimal =',', encoding ='utf-8')
+# df_amsterdam["Flyers"] = np.where(df_amsterdam.Opp_m2 == 1, 'Gedaan', np.where(df_amsterdam.Opp_m2 == 2, 'Moet nog', 'Deels Gedaan'))
 
 def flyers_amsterdam_map(df):
     fig = px.choropleth_mapbox(df,
