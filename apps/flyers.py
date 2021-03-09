@@ -2,6 +2,7 @@ from dash.dependencies import Input, Output
 import numpy as np
 import json
 import dash_core_components as dcc
+import dash_table
 import plotly.express as px
 import plotly.graph_objs as go
 
@@ -69,7 +70,12 @@ def flyers_amsterdam_map(df):
     return fig
 
 df_amsterdam_buurten = pd.read_csv("data/buurten_data_cbs_amsterdam_v1.csv", delimiter=',', decimal='.',
-                                   encoding='utf-8')
+                                   encoding='utf-8', dtype={
+                                       'Bijstand ': np.float64,
+                                       'AO':        np.float64,
+                                       'WW':        np.float64,
+                                       'AOW':       np.float64,
+                                       })
 
 migratieachtergrond = ['Westers', 'Niet-westers', 'Marokko', 'Nederlandse Antillen en Aruba ', 'Suriname',
                        'Turkije', 'Overig']
@@ -82,6 +88,51 @@ x = ['Potentie', 'Huidig']
 selectie = huishoudens
 # df_amsterdam_buurten.loc[df_amsterdam_buurten['Buurt'] == buurt[0]][selectie]
 
+def percent(x, digits=2):
+    return round(x * 100, digits)
+
+table_df = pd.merge(
+    df_amsterdam_buurten,
+    df_amsterdam_google_sheet.drop(columns=['Aantal Flyers']),
+    how='left',
+    on='Buurt')
+table_df['Niet-westers (%)'] = table_df.apply(lambda x: percent(x['Niet-westers'] / x['Aantal inwoners']) if x['Aantal inwoners'] else 0, axis=1)
+table_df['Mensen/huishouden'] = table_df.apply(lambda x: round(x['Aantal inwoners'] / x['Huishoudens'], 2) if x['Huishoudens'] else 0, axis=1)
+table_df['Uitkering (%)'] = table_df.apply(lambda x: percent((x['Bijstand '] + x['AO'] + x['WW'] + x['AOW']) / x['Aantal inwoners']) if x['Aantal inwoners'] else 0, axis=1)
+table_df['Score'] = table_df.apply(lambda x: round(x['Niet-westers (%)'] + x['Uitkering (%)'], 2) if x['Geflyerd'] != 'Gedaan' else 0, axis=1)
+table_df = table_df.sort_values(by='Score', ascending=False)
+table_df = table_df[['Buurt', 'Huishoudens', 'Mensen/huishouden', 'Niet-westers (%)', 'Uitkering (%)', 'Geflyerd', 'Aantal Flyers', 'Score']]
+
+def discrete_background_color_bins(df, columns, n_bins=5):
+    import colorlover
+    df_numeric_columns = df[columns]
+    bounds = [i * (1.0 / n_bins) for i in range(n_bins + 1)]
+    df_max = df_numeric_columns.max().max()
+    df_min = df_numeric_columns.min().min()
+    ranges = [
+        ((df_max - df_min) * i) + df_min
+        for i in bounds
+    ]
+    styles = []
+    for i in range(1, len(bounds)):
+        min_bound = ranges[i - 1]
+        max_bound = ranges[i]
+        backgroundColor = colorlover.scales[str(n_bins)]['seq']['YlGn'][i - 1]
+        color = 'white' if i > len(bounds) / 2. else 'black'
+        for column in df_numeric_columns:
+            styles.append({
+                'if': {
+                    'column_id': column,
+                    'filter_query': f'{{{column}}} >= {min_bound} && {{{column}}} < {max_bound}',
+                },
+                'backgroundColor': backgroundColor,
+                'color': color
+            })
+    return styles
+
+styles = discrete_background_color_bins(table_df, columns=['Niet-westers (%)', 'Uitkering (%)'])
+# TODO: location
+# TODO: cities
 
 def bar_chart_maps(buurt,selectie): #[19, 73] and labelMaastricht
     x = selectie
@@ -144,7 +195,27 @@ layout = html.Div([
                 dcc.Graph(id='Bar-plot-buurten'#, figure=bar_chart_maps(buurt,selectie)
                           )])
         ], width={"size": 8, "offset": 2})
-    ])
+    ]),
+    html.Br(),
+    # legend,
+    dash_table.DataTable(
+        id='table',
+        columns=[{"name": k, "id": k} for k in table_df.columns],
+        data=table_df.to_dict('records'),
+        style_header={'backgroundColor': 'rgb(30, 30, 30)'},
+        style_cell={
+            'backgroundColor': 'rgb(50, 50, 50)',
+            'color': 'white'
+        },
+        page_action="native",
+        page_current=0,
+        page_size=25,
+        # row_selectable='multi',
+        filter_action="native",
+        sort_action="native",
+        sort_mode='multi',
+        style_data_conditional=styles,
+    )
 ])
 
 @app.callback(
