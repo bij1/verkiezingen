@@ -116,6 +116,10 @@ radioitems_onderwerp = dbc.FormGroup([
 
 layout = html.Div([
 
+    html.P('Waar kun je flyers krijgen? Zie https://bij1.org/campagnemateriaal/', style={'text-align': 'center'}),
+
+    html.Br(),
+
     # html.Div([
     #         html.Pre(id='hover-data')#, style=styles['pre']
     #     ], className='three columns'),
