@@ -207,6 +207,9 @@ layout = html.Div([
         ], width={"size": 8, "offset": 2})
     ]),
     html.Br(),
+    # legend,
+    html.Div(id='table-container'),
+    html.Br(),
     dbc.Row([
         dbc.Col([radioitems_onderwerp], width={"size": 8, "offset": 2})
         ]),
@@ -218,9 +221,6 @@ layout = html.Div([
                           )])
         ], width={"size": 8, "offset": 2})
     ]),
-    html.Br(),
-    # legend,
-    html.Div(id='table-container'),
 ])
 
 @app.callback(
