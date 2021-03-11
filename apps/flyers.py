@@ -108,10 +108,9 @@ table_df = gdf[['Buurt', 'geometry', 'center']].merge(
     how='inner',
     on='Buurt',
 ).merge(
-    df_amsterdam_google_sheet.drop(columns=['Aantal Flyers']),
+    df_amsterdam_google_sheet[df_amsterdam_google_sheet['Geflyerd'] != 'Gedaan'].drop(columns=['Aantal Flyers']),
     how='left',
     on='Buurt')
-table_df = table_df[table_df['Geflyerd'] != 'Gedaan']
 table_df['Niet-westers (%)'] = table_df.apply(lambda x: percent(x['Niet-westers'] / x['Aantal inwoners']) if x['Aantal inwoners'] else 0, axis=1)
 table_df['Mensen/huishouden'] = table_df.apply(lambda x: round(x['Aantal inwoners'] / x['Huishoudens'], 2) if x['Huishoudens'] else 0, axis=1)
 table_df['Uitkering (%)'] = table_df.apply(lambda x: percent((x['Bijstand '] + x['AO'] + x['WW'] + x['AOW']) / x['Aantal inwoners']) if x['Aantal inwoners'] else 0, axis=1)
