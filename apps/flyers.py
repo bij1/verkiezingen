@@ -104,7 +104,7 @@ def percent(x, digits=2):
     return round(x * 100, digits)
 
 table_df = gdf[['Buurt', 'geometry', 'center']].merge(
-    df_amsterdam_buurten,
+    df_amsterdam_buurten[df_amsterdam_buurten['Huishoudens'] > 0],
     how='inner',
     on='Buurt',
 ).merge(
@@ -267,7 +267,7 @@ def callback_distance(hoverData):
             },
             page_action="native",
             page_current=0,
-            page_size=25,
+            page_size=10,
             # row_selectable='multi',
             filter_action="native",
             sort_action="native",
