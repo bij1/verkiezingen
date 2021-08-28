@@ -15,46 +15,7 @@ import dash_daq as daq
 import dash
 import numpy as np
 
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-#id of your google sheet
-SAMPLE_SPREADSHEET_ID_input ='1_xU8TGUOc0WJVdW0V6Z5cHs7yWsO3FoX7rya9wy9G7Q' #'1cvZswLiDo3LfhnA7RcS8vFqacx73RGor-OZ_FtvyLE8'
-SAMPLE_RANGE_NAME = 'A1:AH1000'
-
-def main():
-    global values_input, service
-    creds = None
-    if os.path.exists('token.pickle'):
-        with open('token.pickle', 'rb') as token:
-            creds = pickle.load(token)
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            google_file = 'data/credentials.json'
-            if 'GOOGLE_CREDS' in os.environ:
-                with open(google_file,'w') as f:
-                    f.write(os.environ['GOOGLE_CREDS'])
-            else:
-                throw('please set the GOOGLE_CREDS environment variable, using the contents of the credentials json file to be obtained from https://console.developers.google.com/apis/credentials.')
-            flow = InstalledAppFlow.from_client_secrets_file(google_file, SCOPES)
-            creds = flow.run_local_server(port=0)
-        with open('token.pickle', 'wb') as token:
-            pickle.dump(creds, token)
-
-    service = build('sheets', 'v4', credentials=creds)
-
-    # Call the Sheets API
-    sheet = service.spreadsheets()
-    result_input = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID_input,
-                                range=SAMPLE_RANGE_NAME).execute()
-    values_input = result_input.get('values', [])
-
-    if not values_input and not values_expansion:
-        print('No data found.')
-
-main()
-
-df_amsterdam_google_sheet=pd.DataFrame(values_input[1:], columns=values_input[0])
+df_amsterdam_google_sheet = pd.read_csv("data/flyer_amsterdam.csv", delimiter=',', encoding='utf-8')
 
 # def refresh_data():
 #     main()
@@ -180,10 +141,9 @@ radioitems_potentie = dbc.FormGroup([
     ])
 
 layout = html.Div([
-    # html.Div(id='output-keuze'),
     html.P(['Waar kun je flyers krijgen? Zie ', html.A('hier', href='https://bij1.org/campagnemateriaal/'), '!'], id='link', style={'textAlign': 'center'}),
 
-    html.P(['Wil je doorgeven dat je ergens gaat flyeren? Zie ', html.A('hier', href='https://docs.google.com/spreadsheets/d/1_xU8TGUOc0WJVdW0V6Z5cHs7yWsO3FoX7rya9wy9G7Q'), '!'], id='link', style={'textAlign': 'center'}),
+    html.P(['Wil je doorgeven dat je ergens gaat flyeren? Geef dit dan door in onze Signal groepen!'], id='link', style={'textAlign': 'center'}),
 
     # html.Div(
     #     daq.BooleanSwitch(
