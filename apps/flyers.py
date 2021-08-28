@@ -180,11 +180,6 @@ radioitems_potentie = dbc.FormGroup([
     ])
 
 layout = html.Div([
-    html.P(['Waar kun je flyers krijgen? Zie ', html.A('hier', href='https://bij1.org/campagnemateriaal/'), '!'], id='link', style={'textAlign': 'center'}),
-
-    html.P(['Wil je doorgeven dat je ergens gaat flyeren? Zie ', html.A('hier', href='https://docs.google.com/spreadsheets/d/1_xU8TGUOc0WJVdW0V6Z5cHs7yWsO3FoX7rya9wy9G7Q'), '!'], id='link', style={'textAlign': 'center'}),
-
-    html.Br(),
     # html.Div(id='output-keuze'),
     html.P(['Waar kun je flyers krijgen? Zie ', html.A('hier', href='https://bij1.org/campagnemateriaal/'), '!'], id='link', style={'textAlign': 'center'}),
 
